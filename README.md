@@ -32,6 +32,7 @@ cd RP-FGSM
 ```
 
 Install miniconda: https://docs.conda.io/en/latest/miniconda.html
+
 Create conda environment for Python 3.7
 ```
 conda create -n rpfgsm python=3.7
@@ -62,12 +63,15 @@ The pre-trained models will download automatically on the first execution of the
 ## Generate adversarial images
 Generate adversarial images executing:
 ```
-python rp-fgsm.py --model=<modelName> --eps=<epsilonValue> --gamma=<gammaValue>
+python rp-fgsm.py --dataset=<datasetPath> --model=<modelName> --eps=<epsilonValue> --gamma=<gammaValue>
 ```
 For example:
 ```
 python rp-fgsm.py --model=resnet50 --eps=16/255 --gamma=0.99
 ```
+
+\<datasetPath\> should be the path to a directory containing images with png or jpg extension
+
 \<modelName\> can be one of: resnet50, resnet18, alexnet, densenet161.
  
 \<epsilonValue\> should be in fraction as x/255, x = 1,2,...,255.
@@ -75,11 +79,11 @@ python rp-fgsm.py --model=resnet50 --eps=16/255 --gamma=0.99
 \<gammaValue\> should be in decimal, between 0 and 1.
 
 ## Output and format
-The adversarial images and the log file are stored in 'results/' folder.
+The adversarial images and the log file are stored in 'results/' directory.
 
-The image is in 'results/adv_<modelName>_eps<epsilonValue>_gamma<gammaValue>' folder.
+The image is in 'results/adv_\<modelName\>_eps\<epsilonValue\>_gamma\<gammaValue\>' directory.
 
-Classification results are in log_<modelName>_eps<epsilonValue>_gamma<gammaValue>.txt, in the following order of columns:
+Classification results are in log_\<modelName\>_eps\<epsilonValue\>_gamma\<gammaValue\>.txt, in the following order of columns:
 * image name
 * original class
 * original class probability
@@ -88,9 +92,9 @@ Classification results are in log_<modelName>_eps<epsilonValue>_gamma<gammaValue
 * final class
 * final class probability
 
-Runtime results are in logTimes_<modelName>_eps<epsilonValue>_gamma<gammaValue>.txt, in the following order of columns:
+Runtime results are in logTimes_\<modelName\>_eps\<epsilonValue\>_gamma\<gammaValue\>.txt, in the following order of columns:
 * image name
-* runtime (millisecond) 
+* runtime (seconds) 
 
 ## Authors
 * [Ricardo Sanchez-Matilla](mailto:ricardo.sanchezmatilla@qmul.ac.uk),
