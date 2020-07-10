@@ -62,12 +62,15 @@ The pre-trained models will download automatically on the first execution of the
 ## Generate adversarial images
 Generate adversarial images executing:
 ```
-python rp-fgsm.py --model=<modelName> --eps=<epsilonValue> --gamma=<gammaValue>
+python rp-fgsm.py --dataset=<datasetPath> --model=<modelName> --eps=<epsilonValue> --gamma=<gammaValue>
 ```
 For example:
 ```
 python rp-fgsm.py --model=resnet50 --eps=16/255 --gamma=0.99
 ```
+
+\<datasetPath\> should be the path to a directory containing images with png or jpg extension
+
 \<modelName\> can be one of: resnet50, resnet18, alexnet, densenet161.
  
 \<epsilonValue\> should be in fraction as x/255, x = 1,2,...,255.
