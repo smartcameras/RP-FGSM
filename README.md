@@ -17,7 +17,7 @@ This is the official repository of Robust Private FGSM (RP-FGSM), a work publish
  - Opencv-python
  - Tqdm
 
-The code has been tested on Ubuntu 18.04 and MacOs 10.14.4.
+The code has been tested on Ubuntu 18.04 and MacOs 10.15.5.
 
 ## Setup
 
