@@ -21,6 +21,16 @@ The code has been tested on Ubuntu 18.04 and MacOs 10.15.5.
 
 ## Setup
 
+Clone this repository
+```
+git clone https://github.com/smartcameras/RP-FGSM.git
+```
+
+Go to the working directory
+```
+cd <path>/RP-FGSM
+```
+
 Install miniconda: https://docs.conda.io/en/latest/miniconda.html
 Create conda environment for Python 3.7
 ```
