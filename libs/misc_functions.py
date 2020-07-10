@@ -194,7 +194,7 @@ def standarise(img):
 
 def initialise(args):
 
-	image_list = glob.glob('{}*.png'.format(args.dataset))
+	image_list = glob.glob('{}*.png'.format(args.dataset)) + glob.glob('{}*.jpg'.format(args.dataset))
 
 	allModels = []
 	for arch in args.models:
