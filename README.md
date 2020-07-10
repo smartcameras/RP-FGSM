@@ -28,7 +28,7 @@ git clone https://github.com/smartcameras/RP-FGSM.git
 
 Go to the working directory
 ```
-cd <path>/RP-FGSM
+cd RP-FGSM
 ```
 
 Install miniconda: https://docs.conda.io/en/latest/miniconda.html
